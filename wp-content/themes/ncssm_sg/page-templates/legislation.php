@@ -31,7 +31,7 @@ get_header(); ?>
 <div class="section-header">
 </div>
 <main>
-    <div class="container">
+    <div class="pageContainer">
         <?php while (have_posts()) : the_post();
             get_template_part('content', 'page');
         endwhile; // end of the loop. ?>

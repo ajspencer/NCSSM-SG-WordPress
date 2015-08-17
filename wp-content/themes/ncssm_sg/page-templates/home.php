@@ -7,7 +7,6 @@
 $slidesArgs = array('post_type' => 'homepage-slides', 'showposts' => 10);
 $slidesQuery = new WP_Query($slidesArgs);
 get_header(); ?>
-<script src="../js/jQuery-Plugin-To-Add-Cool-Animations-To-Your-Text-Text-Animator"></script>
 
 <div class="slider">
     <?php while ($slidesQuery->have_posts()): $slidesQuery->the_post(); ?>
@@ -64,7 +63,7 @@ get_header(); ?>
 
             <h3>Executive</h3>
 
-            <p>Presided by Student Body President Kulgod, the executive branch of SG holds the power to implement
+            <p>Presided by Student Body President Aikat, the executive branch of SG holds the power to implement
                 Resolutions of the Senate, and represent SG to the administration, the state, and the student body.</p>
         </div>
         <div class="branch">
@@ -72,7 +71,7 @@ get_header(); ?>
 
             <h3>Treasury</h3>
 
-            <p>The Treasury of SG, managed by Vinay Kshirsagar, controls the distribution of all funds and expenses of
+            <p>The Treasury of SG, managed by Tejal Patwardhan, controls the distribution of all funds and expenses of
                 SG.</p>
         </div>
     </section>

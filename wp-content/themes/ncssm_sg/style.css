@@ -269,24 +269,232 @@ main {
 }
 
 .sg-image {
-    width: 25em;
     float: right;
     padding: 30px;
 }
 
 .sg-image img {
-    width: 100%;
+    max-height: 375px;
+    position: relative;
+    display: block;
+    padding-bottom: 8px;
+    margin: auto;
 }
 
 .sg-image span {
     text-align: center;
     display: block;
 }
+@media only screen and (max-width: 768px) {
+    .sg-image img {
+       width: 70%;
+        margin: 0 auto;
+    }
+}
 
 /*----------------
 3.0 Nav
 ----------------*/
+.everest-mobile-nav ul.nav-menu li.menu-item .nav-expand { display:none; }
+.everest-mobile-nav .nav-top-expand {display: none;}
 
+
+@media only screen and (max-width: 768px) {
+    .everest-mobile-nav ul.nav-menu,
+    .everest-mobile-nav ul.nav-menu ul.sub-menu,
+    .everest-mobile-nav ul.nav-menu ul.sub-menu ul.sub-menu{
+        height: auto;
+        display: block;
+        width: 100% !important;
+        box-shadow: none;
+    }
+
+    .nav-expanded {
+        display: inherit;
+    }
+
+    .main-header {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+
+    .icons a:nth-child(5) {
+        display: none;
+    }
+
+    .main-header #headernav li a {
+        text-decoration: none;
+        padding: 0 20px;
+        background: #00417f;
+    }
+
+    #headernav #mobilenavtoggle a {
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        border-bottom: 4px solid #942624;
+    }
+    #headernav li a, #headernav li ul.sub-menu li a, #headernav #mobilenavtoggle a {
+        display: block;
+        width: 100%;
+        padding: 0 !important;
+        border: none;
+        height: 40px;
+        line-height: 40px;
+    }
+    #headernav li a, #headernav #mobilenavtoggle a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 30px 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #menu-menu-2 {
+        padding: 0;
+    }
+    #menu-menu-1-container {
+        width: 100%
+    position: relative;
+    }
+    #headernav {
+        width: 100%
+    }
+    .branch {
+        width: 100% !important;
+    }
+
+    .main-header #headernav li ul li {
+        padding: 0px 20px !important;
+    }
+    ul.sub-menu li {
+        background-color: #336799;
+    }
+    ul.sub-menu li a {
+        background-color: rgb(51, 103, 153)!important;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.menu-item {
+        display: block !important;
+        position: relative !important;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #000000;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.menu-item ul.sub-menu li.menu-item {
+        border-bottom: none;
+        border-top: 1px solid #000000;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.menu-item a {
+        display: block !important;
+        text-align: center;
+        line-height: 42px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .everest-mobile-nav ul.nav-menu ul.sub-menu {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        display: none !important;
+        float: none !important;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.menu-item .nav-expand {
+        display: block;
+        width: 50px;
+        font-size: 30px;
+        line-height: 42px;
+        height: 42px;
+        font-weight: bold;
+        color: inherit;
+        font-family: monospace;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .logo span {
+        display: none;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.menu-item:hover > ul.sub-menu,
+    .everest-mobile-nav ul.nav-menu ul.sub-menu li.menu-item:hover > ul.sub-menu {
+        display: none;
+    }
+
+    .everest-mobile-nav ul.nav-menu li.nav-expanded > ul.sub-menu,
+    .everest-mobile-nav ul.nav-menu ul.sub-menu li.nav-expanded > ul.sub-menu {
+        display: block !important;
+    }
+
+    /* This block and the next describe the "menu" bar that shows up that the user taps to toggle the menu */
+    .everest-mobile-nav .nav-top-expand {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    .everest-mobile-nav .nav-top-expand a {
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+        display: block;
+        text-transform: uppercase;
+        color: #AAA;
+        font-family: Lato, Arial, sans-serif;
+        line-height: 42px;
+    }
+
+    .everest-mobile-nav .nav-top-expand div {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .everest-mobile-nav .nav-top-expand div span {
+        display: block;
+        background: #000000;
+        height: 3px;
+        margin-top: 3px;
+    }
+
+    .everest-mobile-nav ul.nav-menu {
+        display: none;
+    }
+
+    .everest-mobile-nav.nav-top-expanded ul.nav-menu {
+        display: block;
+    }
+}
+.nav-expand {
+    position: absolute;
+    display: none;
+}
+
+
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%
+}
 .main-header {
     height: 5.3em;
     line-height: 5em;
@@ -301,59 +509,56 @@ main {
 }
 
 
-.main-header nav li ul {
+.main-header #headernav li ul {
     background: #00417f;
     margin-top: -1px;
     text-align: center;
 }
 
-header nav a:hover {
+header #headernav a:hover {
     color: #fff !important;
 }
 .main-header .logo {
     float: left;
 }
 
-.main-header nav li:hover ul {
+.main-header #headernav li:hover ul {
     position: absolute;
 }
 
-.main-header nav li:hover ul li {
+.main-header #headernav li:hover ul li {
     display: block;
 }
 
-.main-header nav li ul li {
+.main-header #headernav li ul li {
     line-height: 20px;
     padding: 15px 20px;
 }
 
-.main-header nav li ul li a {
+.main-header #headernav li ul li a {
     padding: 0;
 }
 
-.main-header nav {
+.main-header #headernav {
     float: right;
 }
 
-.main-header nav ul {
+.main-header #headernav ul {
     list-style: none;
     margin: 0;
     position: relative;
     z-index: 2;
 }
 
-.main-header nav li {
+.main-header #headernav li {
     display: inline-block;
 }
 
-.main-header nav li a {
+.main-header #headernav li a {
     text-decoration: none;
     color: #AAA;
     padding: 0 20px;
     font-family: Lato, Arial, sans-serif;
-}
-.current-menu-parent>a {
-    color: #FFF !important;
 }
 .current-menu-item>a, .menu-item.current-menu-item>a {
     color: #FFF !important;
@@ -565,6 +770,9 @@ ul.tags {
 /*----------------
 7.0 Homepage Branches
 ----------------*/
+.pageContainer {
+    padding: 2em 3em;
+}
 
 main.homepage {
     padding: 35px 0;

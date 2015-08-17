@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <main>
-    <div class="container">
+    <div class="pageContainer">
         <div class="sg-image">
             <img src="<?php the_field('headshot');  ?>"/>
             <span class="caption">  <?php  the_field('name'); ?>, <?php the_field('title'); ?></span>

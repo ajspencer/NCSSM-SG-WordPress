@@ -6,7 +6,8 @@
  *
  * @package ncssm_sg
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -49,8 +50,15 @@
                 <div class="logo">
                     <span><a href="http://ncssm.edu/sg/index.html"><?php bloginfo('name'); ?> </a></span>
                 </div>
-                <nav role="navigation">
-                    <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-                </nav>
+                <div id="headernav">
+                    <div id="mobilenavtoggle" style="display: none;"><a href="#">Menu<div><span></span><span></span><span></span></div></a></div>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                </div>
             </div>
         </header>
+        <script type="text/javascript" src="<?=get_stylesheet_directory_uri()?>/js/jquery.everestMobileNav.js"></script>
+        <script>
+            (function($){
+                $('.main-header').everestMobileNav();
+            })(jQuery);
+        </script>
